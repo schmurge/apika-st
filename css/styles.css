@@ -1,0 +1,92 @@
+*{
+	font-family: Calibri;
+	border-radius: 0 !important
+}
+.row{
+	margin-bottom: 10px;
+}
+
+#header-contacts{
+	text-align: right;
+}
+#header-contacts > div{
+	padding: 5px 0 0 0;
+	font-size: 16px;
+}
+#header-row{
+	margin-bottom: 15px;
+}
+#slider-send-button{
+	position: absolute;
+	margin-top: -62px;
+	right: 33px;
+}
+div[u="slides"]{
+	/*border-radius: 4px;*/
+}
+#left-tree{
+	
+}
+#left-tree > .list-group-item{
+	padding: 3px;
+}
+#left-tree > .list-group-item.sub{
+	padding-left: 20px;
+}
+.list-group-item, .gradient {
+	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmRhYzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffdac6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ffdac6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ffdac6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#ffdac6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#ffdac6 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#ffdac6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffdac6',GradientType=0 ); /* IE6-8 */
+
+	color: #424242;
+}
+#left-menu .list-group-item{
+	font-size: 16px;
+	font-weight: bold;
+	font-kerning: initial;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+.list-group-item a
+,.list-group-item
+{
+	color: #424242;
+}
+.product-thumb{
+	height: 150px;
+	border: solid 5px #ccc;
+	background: #F3F3F3;
+	text-align: center;
+	position: relative;
+}
+.product-thumb-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -30px;
+}
+.form-control::-webkit-input-placeholder{
+	color:#bbb;
+	font-style: italic;
+}
+.form-control::-moz-placeholder{
+	color:#bbb; 
+	font-style: italic;
+} /* FF 19+ */
+.form-control:-moz-placeholder{
+	color:#bbb;
+	font-style: italic;
+} /* FF 18- */
+.form-control:-ms-input-placeholder{
+	color:#bbb;
+	font-style: italic;
+}
