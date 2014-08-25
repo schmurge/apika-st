@@ -13,7 +13,6 @@
 	<div class="col-md-3">
 		<ul class="list-group" id="left-menu">
 			<li class="list-group-item"><a href="/index.php">Главная</a></li>
-			<li class="list-group-item"><a href="/products.php">Продукты</a></li>
 			<li class="list-group-item"><a href="/services.php">Услуги</a></li>
 			<li class="list-group-item"><a href="/prices.php">Цены</a></li>
 			<li class="list-group-item"><a href="/contacts.php">Контакты</a></li>
