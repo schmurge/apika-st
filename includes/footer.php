@@ -17,7 +17,7 @@
 		<p>9:00 — 19:00</p>
 	</div>
 	<div class="col-md-3 footer-contacts-column text-center">
-		<p>Оформить заявку</p>
+		<p><a href="/contacts.php">Оформить заявку</a></p>
 	</div>
 </div>
 <div class="row">
