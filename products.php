@@ -1,3 +1,4 @@
+<?php $_HEADER = 'Продукты'; ?>
 <?php include('./includes/body-open.php'); ?>
 <?php include('./includes/header.php'); ?>
 <?php include('./includes/products.php'); ?>

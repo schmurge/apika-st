@@ -1,3 +1,4 @@
+<?php $_HEADER = 'Галерея'; ?>
 <?php include('./includes/body-open.php'); ?>
 <?php include('./includes/header.php'); ?>
 
