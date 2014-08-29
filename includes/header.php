@@ -20,13 +20,12 @@
 		</ul>
 	</div>
 	<div class="col-md-9">
-		<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 700px; height: 246px;">
-		    <!-- Slides Container -->
-		    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 700px; height: 246px;">
-		        <div><img u="image" src="/images/1.jpg" /></div>
-		        <div><img u="image" src="/images/2.jpg" /></div>
-		        <div><img u="image" src="/images/3.jpg" /></div>
-		        <div><img u="image" src="/images/4.jpg" /></div>
+		<div id="slider1_container" style="position: relative; top: 0px; left: 0px; height: 246px; width: 847px;">
+		    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;  width: 847px; height: 246px;">
+		        <div style="width:100%;"><img u="image" src="/images/1.jpg" /></div>
+		        <div style="width:100%;"><img u="image" src="/images/2.jpg" /></div>
+		        <div style="width:100%;"><img u="image" src="/images/3.jpg" /></div>
+		        <div style="width:100%;"><img u="image" src="/images/4.jpg" /></div>
 		    </div>
 		</div>
 		<a class="btn btn-default btn-lg gradient" href="/contacts.php" id="slider-send-button">Отправить заявку на расчёт</a>

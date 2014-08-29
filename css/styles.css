@@ -95,3 +95,19 @@ div[u="slides"]{
 	color:#bbb;
 	font-style: italic;
 }
+
+label.error{
+	display: none !important;
+}
+.form-control.error{
+	border: solid 1px #F00;
+}
+.gallery_h3{
+	color: #974706;
+}
+.left-tree-desc{
+	padding: 0 13px;
+}
+.prod-name{
+	margin-top: 10px;
+}
