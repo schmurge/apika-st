@@ -1,3 +1,60 @@
+<?php
+	// var_dump($_POST);
+
+	$_name;
+	$_phone;
+	$_email;
+	$_message;
+
+	$validName = true;
+	if (isset($_POST['name'])) {
+		$_name = $_POST['name'] = trim($_POST['name']);
+		$validName = !empty($_POST['name']);
+		// var_dump($validName);
+	}
+
+	$validPhone = true;
+	if (isset($_POST['phone'])) {
+		$_phone = $_POST['phone'] = trim($_POST['phone']);
+		$validPhone = !empty($_POST['phone']);
+		// var_dump($validPhone);
+	}
+
+	$validEmail = true;
+	if (isset($_POST['email'])) {
+		$_email = $_POST['email'] = trim($_POST['email']);
+		$validEmail = (bool)filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+		// var_dump($validEmail);
+	}
+
+	$validMessage = true;
+	if (isset($_POST['message'])) {
+		$_message = $_POST['message'] = trim($_POST['message']);
+		$validMessage = !empty($_POST['message']);
+		// var_dump($validMessage);
+	}
+
+	$sent = false;
+	if (isset($_POST['email']) && isset($_POST['message']) && isset($_POST['phone']) && isset($_POST['name']) && $validName && $validPhone && $validEmail && $validMessage) {
+		$from = $_POST['email'];
+		$subject = 'Test mail';
+		$message = <<<EOM
+Данные заказчика:\n
+$_name\n
+$_phone\n
+$_email\n
+\n
+Описание:\n
+$_message
+EOM;
+
+		$sent = $result = mail("doc.schmurge@gmail.com",$subject,$message,"From: $from\n");
+		unset($_POST);
+	}
+
+	
+
+?>
 <div class="row">
 	<div class="col-md-4">
 		<h2>Контакты</h2>
@@ -17,25 +74,25 @@
 		<p>КПП 770301001</p>
 	</div>
 	<div class="col-md-8">
-		<form class="form">
+		<form id="addRequestForm" class="cmxform form" method="post" action="">
 			<div class="col-md-12">
 				<h2>Оставить заявку</h2>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Ваше имя"/>
+						<input type="text" id="name" name="name" class="form-control <?php echo $validName ? '' : ' error '; ?>" placeholder="Ваше имя" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>"/>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Телефон"/>
+						<input type="text" id="phone" name="phone" class="form-control <?php echo $validPhone ? '' : ' error '; ?>" placeholder="Телефон" value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : ''; ?>"/>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Email"/>
+						<input type="text" id="email" name="email" class="form-control <?php echo $validEmail ? '' : ' error '; ?>" placeholder="Email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>"/>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<textarea placeholder="Сообщение оператору" class="form-control" style="height: 131px;"></textarea>
+						<textarea id="message" name="message" placeholder="Сообщение оператору" class="form-control <?php echo $validMessage ? '' : ' error '; ?>" style="height: 131px;"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?></textarea>
 					</div>
 				</div>
 			</div>
@@ -45,7 +102,8 @@
 					<div>8 (925) 090-63-61</div>
 				</div>
 				<div class="col-md-6">
-					<button type="submit" class="btn btn-default btn-lg gradient" style="width: 100%;">Отправить</button>
+					<?php if ($sent) : ?><p class="sent">Сообщение отправлено</p><?php endif; ?>
+					<button type="submit" class="submit btn btn-default btn-lg gradient" style="width: 100%;">Отправить</button>
 				</div>
 				<br/><br/><br/><br/>
 				<div class="col-md-12 text-center">
@@ -53,5 +111,36 @@
 				</div>
 			</div>
 		</form>
+		<script>
+			$(document).ready(function(){
+				$("#addRequestForm").validate({
+					debug: true,
+					submitHandler: function(form) {
+						form.submit();
+					},
+					rules: {
+						name: {
+							required: true
+						},
+						phone: {
+							required: true
+						},
+						message: {
+							required: true
+						},
+						email: {
+							required: true,
+							email: true
+						}
+					},
+					messages: {
+						name: '',
+						phone: '',
+						message: '',
+						email: ''
+					}
+				});
+			});
+		</script>
 	</div>
 </div>

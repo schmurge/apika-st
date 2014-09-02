@@ -111,3 +111,8 @@ label.error{
 .prod-name{
 	margin-top: 10px;
 }
+.sent{
+	text-align: center;
+	color: #008000;
+	font-size: 18px;
+}
