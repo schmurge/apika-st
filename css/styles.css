@@ -12,13 +12,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 
 #header-contacts{
 	text-align: right;
+	font-weight: bold;
+	font-family: Cambria !important;
+	font-size: 20px !important;
+	line-height: 1.2em;
 }
-#header-contacts > div{
-	padding: 5px 0 0 0;
-	font-size: 16px;
+#header-contacts *{
+	font-family: "Times New Roman", Georgia, Serif;
+}
+#header-contacts #header-email{
+	color: #2A80DD;
 }
 #header-row{
 	margin-bottom: 15px;
+	margin-top: 10px;
+}
+#header-row a > img{
+	width: 100%;
 }
 #slider-send-button{
 	position: absolute;
@@ -43,14 +53,14 @@ div[u="slides"]{
 .list-group-item, .gradient {
 	background: #ffffff; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMzcxMTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top,  #ffffff 0%, #e37114 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e37114)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#e37114 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#e37114 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#e37114 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#e37114 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e37114',GradientType=0 ); /* IE6-8 */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ODg4ODgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #ffffff 0%, #888888 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#888888)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#888888 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#888888 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#888888 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#888888 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#888888',GradientType=0 ); /* IE6-8 */
 }
 #left-menu .list-group-item{
 	font-size: 16px;
@@ -115,4 +125,47 @@ label.error{
 	text-align: center;
 	color: #008000;
 	font-size: 18px;
+}
+.header-horizontal-menu{
+	padding: 10px 15px;
+	font-size: 18px;
+	text-align: right;
+}
+.slogan{
+	font-weight: bold;
+	float: left;
+}
+
+.header-horizontal-menu > ul{
+	margin: 0;
+}
+.header-horizontal-menu > ul > li{
+	display: inline-block;
+	text-transform: uppercase;
+	padding-left: 10px;
+	border-left: solid 2px #999;
+	margin-left: 6px;
+}
+.header-horizontal-menu > ul > li:first-child{
+	border-left: none;
+	margin-left: 0;
+}
+.header-horizontal-menu > ul > li > a{
+	color: #000;
+}
+.logo-box{
+	border-right: solid 1px #999;
+}
+
+
+.flexslider ul li{
+	/*overflow: hidden;*/
+	/*height: 200px;*/
+}
+.flexslider img{
+	/*max-height: 200px;*/
+	/*min-height: 200px;*/
+	/*height: 200px;*/
+	/*width: auto !important;*/
+	/*min-width: */
 }
