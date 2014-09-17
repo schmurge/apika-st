@@ -157,15 +157,17 @@ label.error{
 	border-right: solid 1px #999;
 }
 
-
+.owl-carousel img{
+	max-height: 200px;
+	min-height: 200px;
+	height: 200px;
+	width: auto !important;
+}
 .flexslider ul li{
 	/*overflow: hidden;*/
 	/*height: 200px;*/
 }
 .flexslider img{
-	/*max-height: 200px;*/
-	/*min-height: 200px;*/
-	/*height: 200px;*/
 	/*width: auto !important;*/
 	/*min-width: */
 }

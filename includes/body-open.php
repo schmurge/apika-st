@@ -14,6 +14,9 @@
 		<script type="text/javascript" src="/js/scripts.js"></script>
 		<!--[if gte IE 9]><style type="text/css">.gradient {filter: none;}</style><![endif]-->
 
+		<link href="/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+		<link href="/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+		<link href="/css/owl.theme.green.min.css" rel="stylesheet" type="text/css">
 		<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 
 	</head>
