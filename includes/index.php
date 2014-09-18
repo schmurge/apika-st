@@ -1,151 +1,20 @@
 <div class="row">
 	<div class="col-md-3"><?php include('./includes/left-tree.php'); ?></div>
 	<div class="col-md-9">
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Стационарные перегородки</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Алюминевые перегородки</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Цельностеклянные перегородки</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Противопожарные перегородки</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Входные и межкомнатные двери</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Классические перегородки</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Межкомнатные глухие двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Цельностеклянные двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Раздвижные (откатные) двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные межкомнатные двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные матовые двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные маятниковые двери</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
- 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Душевые кабины и перегородки</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные душевые кабины</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные шторки для ванной</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div> 
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Сантехнические перегородки</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Сантехнические туалетные кабины</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Писсуарные перегородки</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Кухонные стеклянные фартуки (скинали)</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные фартуки (скинали)</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Стеклянные козырьки и навесы</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные козырьки и навесы</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Художественная обработка стекла</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Художественная обработка стекла</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Декоративные настенные панели</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Стеклянные настенные панели</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Деревянные настенные панели</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Фасады и входные группы из алюминиевых профилей "теплые" и "холодные"</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Фасады и входные группы</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="gallery_h3">Ограждения и перила</h3>
-			</div>
-			<div class="col-md-4">
-				<div class="prod-name">Ограждения и перила</div>
-				<?php include('./includes/product-thumbnail.php'); ?>
-			</div>
-		</div>
-
-
+		<p><strong><span style="font-size: 150%;">"АПИКА Строй"</span> АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ  - ИНДИВИДУАЛЬНОСТЬ, КАЧЕСТВО, АССОРТИМЕНТ.</strong></p>
+		<p>В современном интерьере стекло получило широкое применение. Изящные и элегантные стеклянные перегородки, двери, стеклянные элементы для ванных комнат, смотрятся привлекательно, эффектно и не выходят из моды. Если Вас интересует изготовление, установка  или другие работы со стеклом любой сложности – наши специалисты всегда рады предложить свои услуги по ДОСТУПНЫМ ЦЕНАМ. Если Вы хотите установить классические остекленные перегородки в офисе, или необходимость возникла в установке витринных перегородок, то обратите внимание на предлагаемый нами ассортимент продукции. Их качество соответствует всем необходимым стандартам, предъявляемым к светопрозрачным конструкциям. </p>
+		<p>Стекло в интерьере позволяет зрительно увеличить площадь помещения, грамотно оформить его с точки зрения дизайна. Однако чтобы добиться максимального эффекта, сначала надо тщательно продумать проект. В частности, перед покупкой офисных перегородок и их монтажом следует снять мерки с того помещения, где их планируется установить, а затем в соответствии с полученной информацией рассчитать, сколько стекла и других материалов потребуется. В компании «АПИКА Строй» Вы можете не только по выгодной цене приобрести любое количество офисных перегородок, но и заказать их установку. Монтажные работы осуществляются опытными специалистами, успешно реализовавшими в Москве не один десяток аналогичных проектов. Также производим обработку стекла, в том числе оказываем услуги художественного матирования и фотопечати.</p>
+		<p><strong>Почему вам стоит нам доверять?</strong><br/>Большой опыт работы в сфере изготовления и монтажа изделий из стекла и алюминия;
+		опыт работы с нестандартными, сложными проектами;
+		вся продукция, предлагаемая клиентам, сертифицирована;
+		четкое выполнение сроков. Мы всегда стремимся к экономии времени наших клиентов;
+		гарантия на все произведенные нами конструкции;
+		определение полного перечня предстоящих расходов на начальных этапах сотрудничества. Наши клиенты всегда могут рассчитать свой бюджет;
+		доступные цены на светопрозрачные конструкции и другие наши изделия;
+		для вас работают только квалифицированные сотрудники с опытом работы;
+		вся наша продукция соответствует современным стандартам, предъявляемым к ее качеству, надежности и безвредности;
+		индивидуальный подход при работе с различными клиентами, независимо от заказываемых объемов;
+		Квалифицированное сервисное обслуживание изготовленной нами продукции.</p>
+		<p><em>Оформить заявку на бесплатный замер и заказать другие услуги можно по телефонам:<br/>+7 (926) 324-29-66; +7 (925) 090-63-61 или электронной почте: zakaz@apika-st.ru</em></p>
 	</div>
 </div>

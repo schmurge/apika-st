@@ -14,7 +14,7 @@
 	<span class="slogan">ИНТЕРЬЕРНЫЕ ТЕХНОЛОГИИ ДЛЯ ДОМА И ОФИСА</span>
 	<ul class="">
 		<li class=""><a href="/index.php">ГЛАВНАЯ</a></li>
-		<li class=""><a href="#">КАТАЛОГ</a></li>
+		<li class=""><a href="/catalog.php">КАТАЛОГ</a></li>
 		<li class=""><a href="/services.php">УСЛУГИ</a></li>
 		<li class=""><a href="/prices.php">ЦЕНЫ</a></li>
 		<li class=""><a href="/contacts.php">ЗАЯВКА И ЗАМЕРЩИК</a></li>

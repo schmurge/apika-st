@@ -77,7 +77,6 @@ div[u="slides"]{
 }
 .product-thumb{
 	height: 150px;
-	border: solid 5px #ccc;
 	background: #F3F3F3;
 	text-align: center;
 	position: relative;
@@ -170,4 +169,11 @@ label.error{
 .flexslider img{
 	/*width: auto !important;*/
 	/*min-width: */
+}
+
+.grey-box{
+	background: #BFBFBF;
+	margin: 20px 0 0 0;
+	padding: 10px;
+	text-align: center;
 }
