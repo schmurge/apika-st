@@ -18,3 +18,15 @@
 		<p><em>Оформить заявку на бесплатный замер и заказать другие услуги можно по телефонам:<br/>+7 (926) 324-29-66; +7 (925) 090-63-61 или электронной почте: zakaz@apika-st.ru</em></p>
 	</div>
 </div>
+
+<div class="gradient text-center horizontal-bar">ПРОСТЫЕ ШАГИ К РЕАЛИЗАЦИИ ВАШЕГО ПРОЕКТА</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="row text-center">
+			<img src="/images/image018.png" style="width: 100%; padding-left: 50px;padding-right: 50px; margin-top: 10px;">
+		</div>
+	</div>
+</div>
+
+<div class="row gradient header-horizontal-menu">&nbsp;</div>

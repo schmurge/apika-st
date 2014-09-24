@@ -33,4 +33,4 @@
 		<div class="item"><img src="/images/909897b4-3d85-11e4-8f48-a718622f012c.jpg" /></div>
 	</div>
 </div>
-<div class="row gradient header-horizontal-menu">&nbsp;</div>
+<div class="row gradient horizontal-bar"><?php echo isset($_HEADER) ? $_HEADER : ''; ?></div>

@@ -177,3 +177,11 @@ label.error{
 	padding: 10px;
 	text-align: center;
 }
+
+.horizontal-bar{
+	text-align: left;
+	font-weight: bold;
+	padding: 10px 15px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
