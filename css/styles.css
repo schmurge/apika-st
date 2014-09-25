@@ -157,10 +157,10 @@ label.error{
 }
 
 .owl-carousel img{
-	max-height: 200px;
-	min-height: 200px;
-	height: 200px;
-	width: auto !important;
+	/*max-height: 200px;*/
+	/*min-height: 200px;*/
+	/*height: 200px;*/
+	/*width: auto !important;*/
 }
 .flexslider ul li{
 	/*overflow: hidden;*/
