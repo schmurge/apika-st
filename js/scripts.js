@@ -5,6 +5,6 @@ jQuery(document).ready(function ($) {
 		autoWidth:true,
 		nav: false,
 		center: true,
-		autoPlay: true
+		autoplay: 5000
 	});
 });
