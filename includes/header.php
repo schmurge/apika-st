@@ -22,15 +22,15 @@
 </div>
 <div class="row">
  	<div class="owl-carousel">
-		<div class="item"><img src="/images/90bb63d4-3d85-11e4-9897-5ee9bf4de7c0.jpg" /></div>
-		<div class="item"><img src="/images/90b888da-3d85-11e4-8541-844c505d3a51.jpg" /></div>
-		<div class="item"><img src="/images/90ae10e4-3d85-11e4-989b-02638a378eea.jpg" /></div>
-		<div class="item"><img src="/images/90a4be4a-3d85-11e4-9b00-ddce79245b87.jpg" /></div>
-		<div class="item"><img src="/images/90a3c42c-3d85-11e4-919e-d02197f88ce4.jpg" /></div>
-		<div class="item"><img src="/images/909c7212-3d85-11e4-953d-415c665a25ec.jpg" /></div>
-		<div class="item"><img src="/images/90a0162e-3d85-11e4-9ff0-bb9e8082fd5b.jpg" /></div>
-		<div class="item"><img src="/images/909f2796-3d85-11e4-9c06-9bba4b6e8d62.jpg" /></div>
-		<div class="item"><img src="/images/909897b4-3d85-11e4-8f48-a718622f012c.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/1.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/2.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/3.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/4.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/5.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/6.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/7.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/8.jpg" /></div>
+		<div class="item"><img src="/images/thumbs/9.jpg" /></div>
 	</div>
 </div>
 <div class="row gradient horizontal-bar"><?php echo isset($_HEADER) ? $_HEADER : ''; ?></div>
