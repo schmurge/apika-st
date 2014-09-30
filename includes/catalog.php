@@ -10,7 +10,13 @@
 					<div class="col-md-4">
 						<a href="/catalog.php?product=<?php echo $product['id']; ?>">
 							<div class="grey-box">
-								<img src="http://dummyimage.com/265x150/<?php echo $colors[count($products)+$product['id']]; ?>/000.gif&text=<?php echo $product['label']; ?>">
+								<?php $fname = __DIR__.'/../images/original/products/'.$product['id'].'/1.jpg'; ?>
+								<?php $furl = '/images/original/products/'.$product['id'].'/1.jpg'; ?>
+								<?php if (file_exists($fname)) : ?>
+									<img src="<?php echo $furl; ?>">
+								<?php else: ?>
+									<img src="http://dummyimage.com/265x150/<?php echo $colors[count($products)+$product['id']]; ?>/000.gif&text=<?php echo $product['label']; ?>">
+								<?php endif; ?>
 								<div class="prod-name"><?php echo $product['label']; ?></div>
 							</div>
 						</a>
@@ -21,22 +27,38 @@
 	<?php endif; ?>
 <?php else: ?>
 	<link href="/css/lightbox.css" rel="stylesheet" />
-
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<h2><?php echo $products[$_GET['product']]['label']; ?></h2>
-			<?php for ($i = 1; $i <= 16; $i++) : ?>
-				<div class="col-md-4">
-					<div class="grey-box">
-						<a href="http://dummyimage.com/1060x600/<?php echo $colors[count($products)+$i]; ?>/000.gif&text=no image" data-lightbox="image-1" data-title="My caption">
-							<img src="http://dummyimage.com/265x150/<?php echo $colors[count($products)+$i]; ?>/000.gif&text=no image">
-						</a>
-					</div>
-				</div>
-			<?php endfor; ?>
+			<?php
+				if (file_exists(__DIR__.'/../images/original/products/'.$_GET['product'].'/')) {
+					$files = array();
+					foreach (new DirectoryIterator(__DIR__.'/../images/original/products/'.$_GET['product'].'/') as $fileInfo) {
+					    if($fileInfo->isDot()) continue;
+					    array_push($files, $fileInfo->getFilename());
+					}
+					if (!empty($files)) {
+						natsort($files);
+						foreach ($files as $file) :
+							?>
+							<div class="col-md-4">
+								<div class="grey-box">
+									<a href="/images/original/products/<?php echo $_GET['product']; ?>/<?php echo $file; ?>" data-lightbox="image-1" data-title="My caption">
+										<img src="/images/original/products/<?php echo $_GET['product']; ?>/<?php echo $file; ?>">
+									</a>
+								</div>
+							</div>
+							<?php
+						endforeach;
+					}
+				}
+			?>
+
 		</div>
 	</div>
 
 	<script type="text/javascript" src="/js/lightbox.min.js"></script>
+	<style>
 
+	</style>
 <?php endif; ?>
