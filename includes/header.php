@@ -7,7 +7,7 @@
 		<div>ПРОИЗВОДСТВО, ДОСТАВКА, МОНТАЖ</div>
 		<div>+7 (926) 324-2966</div>
 		<div>+7 (925) 090-6361</div>
-		<div id="header-email">zakaz@apika-st.ru</div>
+		<div id="header-email">zakaz@apikastroy.ru</div>
 	</div>
 </div>
 <div class="row gradient header-horizontal-menu">

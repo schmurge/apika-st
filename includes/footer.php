@@ -9,7 +9,7 @@
 		<p>8 (925) 090-63-61</p>
 	</div>
 	<div class="col-md-3 footer-contacts-column text-center">
-		<p>Email: zakaz@apika-st.ru</p>
+		<p>Email: zakaz@apikastroy.ru</p>
 	</div>
 	<div class="col-md-3 footer-contacts-column text-center">
 		<p>Приём заказов:</p>
