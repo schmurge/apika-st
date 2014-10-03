@@ -5,7 +5,7 @@
 <?php if (!isset($_GET['product']) || empty($_GET['product'])) : ?>
 	<?php if (!empty($products) && is_array($products)) : ?>
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-12">
 				<?php foreach ($products as $product) : ?>
 					<div class="col-md-4">
 						<a href="/catalog.php?product=<?php echo $product['id']; ?>">
@@ -28,7 +28,7 @@
 <?php else: ?>
 	<link href="/css/lightbox.css" rel="stylesheet" />
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-12">
 			<h2><?php echo $products[$_GET['product']]['label']; ?></h2>
 			<?php
 				if (file_exists(__DIR__.'/../images/original/products/'.$_GET['product'].'/')) {
@@ -53,12 +53,7 @@
 					}
 				}
 			?>
-
 		</div>
 	</div>
-
 	<script type="text/javascript" src="/js/lightbox.min.js"></script>
-	<style>
-
-	</style>
 <?php endif; ?>
