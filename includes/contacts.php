@@ -62,8 +62,9 @@ EOM;
 		<p>8 (926) 324-29-66</p>
 		<p>8 (925) 090-63-61</p>
 		<h4>E-mail:</h4>
-		<p>zakaz@apikastroy.ru</p>
+		<p><a href="mailto:zakaz@apikastroy.ru" target="_blank">zakaz@apikastroy.ru</a></p>
 		<h4>Мы вКонтакте:</h4>
+		<p><a href="http://vk.com/apikastroy" target="_blank">http://vk.com/apikastroy</a></p>
 		<h4>Юридический адрес:</h4>
 		<p>123056, Москва, ул. Большая Грузинская, дом 42, пом. I, комн. 12</p>
 		<h4>Приём заказов:</h4>
