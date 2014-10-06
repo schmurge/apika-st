@@ -1,36 +1,79 @@
 <?php
+
+	define('IMAGES_URL', "/images/");
+	define('IMAGES_PATH', __DIR__.'/../images/');
+	
+	define('CAROUSEL_IMAGES_URL', IMAGES_URL.'carousel/');
+	define('CAROUSEL_IMAGES_PATH', IMAGES_PATH.'carousel/');
+
+	define('PRODUCT_IMAGES_PATH', IMAGES_PATH.'products/');
+	define('PRODUCT_IMAGES_URL', IMAGES_URL.'products/');
+	define('PRODUCT_THUMBS_FOLDER_NAME', 'thumbs');
+
 	$groups = array(
-		1=>'ПЕРЕГОРОДКИ',
-		2=>'ДВЕРИ',
-		3=>'ИЗДЕЛИЯ ИЗ СТЕКЛА',
-		4=>'ИЗДЕЛИЯ ИЗ СТЕКЛА И СТАЛИ',
-		5=>'ИЗДЕЛИЯ ИЗ ДЕРЕВА',
-		6=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА',
+		array('id'=>1, 'label'=>'ПЕРЕГОРОДКИ'),
+		array('id'=>2, 'label'=>'ДВЕРИ'),
+		array('id'=>3, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА'),
+		array('id'=>4, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА И СТАЛИ'),
+		array('id'=>5, 'label'=>'ИЗДЕЛИЯ ИЗ ДЕРЕВА'),
+		array('id'=>6, 'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА'),
 	);
 
-	$products = array(
-		1=>array('id'=>1,'label'=>'АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>1,'label'=>'Алюминиевые')),
-		2=>array('id'=>2,'label'=>'ЦЕЛЬНОСТЕКЛЯННЫЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>1,'label'=>'Цельностеклянные (безрамные)')),
-		3=>array('id'=>3,'label'=>'САНТЕХНИЧЕСКИЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>1,'label'=>'Сантехнические')),
-		4=>array('id'=>4,'label'=>'ПРОТИВОПОЖАРНЫЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>1,'label'=>'Противопожарные')),
+	$_MENU = array(
+		array('group'=>1,'label'=>'Алюминиевые', 'productId'=>1),
+		array('group'=>1,'label'=>'Цельностеклянные (безрамные)', 'productId'=>2),
+		array('group'=>1,'label'=>'Сантехнические', 'productId'=>3),
+		array('group'=>1,'label'=>'Противопожарные', 'productId'=>4),
+		
+		array('group'=>2,'label'=>'Стеклянные распашные', 'productId'=>5),
+		array('group'=>2,'label'=>'Глухие распашные', 'productId'=>6),
+		array('group'=>2,'label'=>'Цельностеклянные распашные, маятниковые', 'productId'=>7),
+		array('group'=>2,'label'=>'Цельностеклянные раздвижные', 'productId'=>7),
+		array('group'=>2,'label'=>'Металлические', 'productId'=>8),
+		array('group'=>2,'label'=>'Входные группы (теплые, холодные)', 'productId'=>9),
+		
+		array('group'=>3,'label'=>'Душевые кабины', 'productId'=>10),
+		array('group'=>3,'label'=>'Кухонные фартуки (скинали)', 'productId'=>11),
+		
+		array('group'=>4,'label'=>'Стеклянные лестницы', 'productId'=>12),
+		array('group'=>4,'label'=>'Лестничные ограждения и перила', 'productId'=>13),
+		
+		array('group'=>5,'label'=>'Декоративные навесные панели', 'productId'=>14),
+		array('group'=>5,'label'=>'Стойки ресепшен', 'productId'=>15),
+		
+		array('group'=>6,'label'=>'Художественная обработка стекла', 'productId'=>16),
+	);
 
-		5=>array('id'=>5,'label'=>'ДВЕРИ СТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Стеклянные распашные')),
-		6=>array('id'=>6,'label'=>'ДВЕРИ ГЛУХИЕ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Глухие распашные')),
-		7=>array('id'=>7,'label'=>'ДВЕРИ ЦЕЛЬНОСТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Цельностеклянные распашные, маятниковые')),
-		8=>array('id'=>7,'label'=>'ДВЕРИ ЦЕЛЬНОСТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Цельностеклянные раздвижные')),
-		9=>array('id'=>8,'label'=>'ДВЕРИ МЕТАЛЛИЧЕСКИЕ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Металлические')),
-		10=>array('id'=>9,'label'=>'ВХОДНЫЕ ГРУППЫ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>2,'label'=>'Входные группы (теплые, холодные)')),
+	if (!empty($_GET['product'])) {
+		foreach ($_MENU as &$menuItem) {
+			if ($menuItem['productId'] == $_GET['product']) {
+				$menuItem['active'] = true;
+			}
+		}
+	}
 
-		11=>array('id'=>11,'label'=>'ДУШЕВЫЕ КАБИНЫ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>3,'label'=>'Душевые кабины')),
-		12=>array('id'=>12,'label'=>'КУХОННЫЕ ФАРТУКИ (СКИНАЛИ)','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>3,'label'=>'Кухонные фартуки (скинали)')),
+	$_PRODUCTS = array(
+		array('id'=>1,'label'=>'АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','thumbPath'=>PRODUCT_IMAGES_PATH.'1/','thumbUrl'=>PRODUCT_IMAGES_URL.'1/','images'=>array('')),
+		array('id'=>2,'label'=>'ЦЕЛЬНОСТЕКЛЯННЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','thumbPath'=>PRODUCT_IMAGES_PATH.'2/','thumbUrl'=>PRODUCT_IMAGES_URL.'2/','images'=>array('')),
+		array('id'=>3,'label'=>'САНТЕХНИЧЕСКИЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>4,'label'=>'ПРОТИВОПОЖАРНЫЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array('')),
 
-		13=>array('id'=>13,'label'=>'СТЕКЛЯННЫЕ ЛЕСТНИЦЫ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>4,'label'=>'Стеклянные лестницы')),
-		14=>array('id'=>14,'label'=>'ЛЕСТНИЧНЫЕ ОГРАЖДЕНИЯ И ПЕРИЛА','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>4,'label'=>'Лестничные ограждения и перила')),
+		array('id'=>5,'label'=>'ДВЕРИ СТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>6,'label'=>'ДВЕРИ ГЛУХИЕ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>7,'label'=>'ДВЕРИ ЦЕЛЬНОСТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>8,'label'=>'ДВЕРИ МЕТАЛЛИЧЕСКИЕ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>9,'label'=>'ВХОДНЫЕ ГРУППЫ','thumbUrl'=>'','images'=>array('')),
 
-		15=>array('id'=>15,'label'=>'ДЕКОРАТИВНЫЕ НАВЕСНЫЕ ПАНЕЛИ','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>5,'label'=>'Декоративные навесные панели')),
-		16=>array('id'=>16,'label'=>'СТОЙКИ РЕСЕПШН','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>5,'label'=>'Стойки ресепшен')),
+		array('id'=>10,'label'=>'ДУШЕВЫЕ КАБИНЫ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>11,'label'=>'КУХОННЫЕ ФАРТУКИ (СКИНАЛИ)','thumbUrl'=>'','images'=>array('')),
 
-		17=>array('id'=>17,'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА','thumbUrl'=>'','images'=>array(''),'menu'=>array('group'=>6,'label'=>'Художественная обработка стекла')),
+		array('id'=>12,'label'=>'СТЕКЛЯННЫЕ ЛЕСТНИЦЫ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>13,'label'=>'ЛЕСТНИЧНЫЕ ОГРАЖДЕНИЯ И ПЕРИЛА','thumbUrl'=>'','images'=>array('')),
+
+		array('id'=>14,'label'=>'ДЕКОРАТИВНЫЕ НАВЕСНЫЕ ПАНЕЛИ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>15,'label'=>'СТОЙКИ РЕСЕПШН','thumbUrl'=>'','images'=>array('')),
+
+		array('id'=>16,'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА','thumbUrl'=>'','images'=>array('')),
 	);
 ?>
 <!DOCTYPE html>

@@ -1,11 +1,11 @@
 <ul class="list-group" id="left-tree">
-	<?php foreach ($groups as $gk=>$group) : ?>
-		<li class="list-group-item"><?php echo $group; ?></li>
-		<?php foreach ($products as $product) : ?>
-			<?php if ($product['menu']['group'] == $gk && !empty($product['menu']['label'])) : ?>
-				<li class="list-group-item sub">
-					<a href="/catalog.php?product=<?php echo $product['id']; ?>">
-						<?php echo $product['menu']['label']; ?>
+	<?php foreach ($groups as $group) : ?>
+		<li class="list-group-item"><?php echo $group['label']; ?></li>
+		<?php foreach ($_MENU as $menuItem) : ?>
+			<?php if ($menuItem['group'] == $group['id'] && !empty($menuItem['label'])) : ?>
+				<li class="list-group-item sub <?php echo (isset($menuItem['active']) && $menuItem['active'] === true) ? ' active ' : '' ?>">
+					<a href="/catalog.php?product=<?php echo $menuItem['productId']; ?>">
+						<?php echo $menuItem['label']; ?>
 					</a>
 				</li>
 			<?php endif; ?>

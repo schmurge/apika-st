@@ -20,17 +20,23 @@
 		<li class=""><a href="/contacts.php">ЗАЯВКА И ЗАМЕРЩИК</a></li>
 	</ul>
 </div>
-<div class="row">
- 	<div class="owl-carousel">
-		<div class="item"><img src="/images/thumbs/1.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/2.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/3.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/4.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/5.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/6.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/7.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/8.jpg" /></div>
-		<div class="item"><img src="/images/thumbs/9.jpg" /></div>
-	</div>
-</div>
+<?php if (file_exists(CAROUSEL_IMAGES_PATH)) : ?>
+	<?php $carouselImagesFolder = new DirectoryIterator(CAROUSEL_IMAGES_PATH); ?>	
+	<?php $files = array(); ?>
+	<?php foreach ($carouselImagesFolder as $fileInfo) : ?>
+		<?php if($fileInfo->isDot()) continue; ?>
+		<?php array_push($files, $fileInfo->getFilename()); ?>
+	<?php endforeach; ?>
+	<?php if (!empty($files)) : ?>
+		<div class="row">
+ 			<div class="owl-carousel">
+				<?php foreach ($files as $file) : ?>
+					<div class="item"><img src="<?php echo CAROUSEL_IMAGES_URL.$file; ?>" /></div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+		<?php  ?>
+	<?php endif; ?>
+	<?php  ?>
+<?php endif; ?>
 <div class="row gradient horizontal-bar"><?php echo isset($_HEADER) ? $_HEADER : ''; ?></div>

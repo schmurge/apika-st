@@ -3,19 +3,17 @@
 	shuffle($colors);
 ?>
 <?php if (!isset($_GET['product']) || empty($_GET['product'])) : ?>
-	<?php if (!empty($products) && is_array($products)) : ?>
+	<?php if (!empty($_PRODUCTS) && is_array($_PRODUCTS)) : ?>
 		<div class="row">
 			<div class="col-md-12">
-				<?php foreach ($products as $product) : ?>
+				<?php foreach ($_PRODUCTS as $product) : ?>
 					<div class="col-md-4">
 						<a href="/catalog.php?product=<?php echo $product['id']; ?>">
 							<div class="grey-box">
-								<?php $fname = __DIR__.'/../images/original/products/'.$product['id'].'/1.jpg'; ?>
-								<?php $furl = '/images/original/products/'.$product['id'].'/1.jpg'; ?>
-								<?php if (file_exists($fname)) : ?>
-									<img src="<?php echo $furl; ?>">
+								<?php if (!empty($product['thumbName']) && file_exists(PRODUCT_IMAGES_PATH.$product['id'].'/'.PRODUCT_THUMBS_FOLDER_NAME.'/'.$product['thumbName'])) : ?>
+									<img src="<?php echo PRODUCT_IMAGES_URL.$product['id'].'/'.PRODUCT_THUMBS_FOLDER_NAME.'/'.$product['thumbName']; ?>">
 								<?php else: ?>
-									<img src="http://dummyimage.com/265x150/<?php echo $colors[count($products)+$product['id']]; ?>/000.gif&text=<?php echo $product['label']; ?>">
+									<img src="http://dummyimage.com/232x201/<?php echo $colors[count($_PRODUCTS)+$product['id']]; ?>/000.gif&text=<?php echo $product['label']; ?>">
 								<?php endif; ?>
 								<div class="prod-name"><?php echo $product['label']; ?></div>
 							</div>
@@ -29,11 +27,11 @@
 	<link href="/css/lightbox.css" rel="stylesheet" />
 	<div class="row">
 		<div class="col-md-12">
-			<h2><?php echo $products[$_GET['product']]['label']; ?></h2>
+			<h2><?php echo $_PRODUCTS[$_GET['product']]['label']; ?></h2>
 			<?php
-				if (file_exists(__DIR__.'/../images/original/products/'.$_GET['product'].'/')) {
+				if (file_exists(PRODUCT_IMAGES_PATH.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME)) {
 					$files = array();
-					foreach (new DirectoryIterator(__DIR__.'/../images/original/products/'.$_GET['product'].'/') as $fileInfo) {
+					foreach (new DirectoryIterator(PRODUCT_IMAGES_PATH.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME) as $fileInfo) {
 					    if($fileInfo->isDot()) continue;
 					    array_push($files, $fileInfo->getFilename());
 					}
@@ -43,8 +41,8 @@
 							?>
 							<div class="col-md-4">
 								<div class="grey-box">
-									<a href="/images/original/products/<?php echo $_GET['product']; ?>/<?php echo $file; ?>" data-lightbox="image-1" data-title="My caption">
-										<img src="/images/original/products/<?php echo $_GET['product']; ?>/<?php echo $file; ?>">
+									<a href="<?php echo PRODUCT_IMAGES_URL.$_GET['product'].'/'.$file; ?>" data-lightbox="image-1" data-title="My caption">
+										<img src="<?php echo PRODUCT_IMAGES_URL.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME.'/'.$file; ?>">
 									</a>
 								</div>
 							</div>
