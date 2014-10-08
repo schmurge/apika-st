@@ -45,9 +45,9 @@
 	);
 
 	if (!empty($_GET['product'])) {
-		foreach ($_MENU as &$menuItem) {
+		foreach ($_MENU as $key=>$menuItem) {
 			if ($menuItem['productId'] == $_GET['product']) {
-				$menuItem['active'] = true;
+				$_MENU[$key]['active'] = true;
 			}
 		}
 	}
@@ -75,6 +75,27 @@
 
 		array('id'=>16,'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА','thumbUrl'=>'','images'=>array('')),
 	);
+
+	function getProductById($productId){
+		global $_PRODUCTS;
+		foreach ($_PRODUCTS as $p) {
+			if ($p['id'] == $productId) {
+				return $p;
+			}
+		}
+		return null;
+	}
+
+	function getMenuByGroupId($groupId){
+		$menuArray = array();
+		global $_MENU;
+		foreach ($_MENU as $m) {
+			if ($m['group'] == $groupId) {
+				$menuArray[] = $m;
+			}
+		}
+		return $menuArray;
+	}
 ?>
 <!DOCTYPE html>
 <html>

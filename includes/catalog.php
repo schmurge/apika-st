@@ -27,11 +27,15 @@
 	<link href="/css/lightbox.css" rel="stylesheet" />
 	<div class="row">
 		<div class="col-md-12">
-			<h2><?php echo $_PRODUCTS[$_GET['product']]['label']; ?></h2>
 			<?php
-				if (file_exists(PRODUCT_IMAGES_PATH.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME)) {
+				$productId = $_GET['product'];
+				$product = getProductById($productId);
+			?>
+			<h2><?php echo $product['label']; ?></h2>
+			<?php
+				if (file_exists(PRODUCT_IMAGES_PATH.$productId.'/'.PRODUCT_THUMBS_FOLDER_NAME)) {
 					$files = array();
-					foreach (new DirectoryIterator(PRODUCT_IMAGES_PATH.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME) as $fileInfo) {
+					foreach (new DirectoryIterator(PRODUCT_IMAGES_PATH.$productId.'/'.PRODUCT_THUMBS_FOLDER_NAME) as $fileInfo) {
 					    if($fileInfo->isDot()) continue;
 					    array_push($files, $fileInfo->getFilename());
 					}
@@ -41,8 +45,8 @@
 							?>
 							<div class="col-md-4">
 								<div class="grey-box">
-									<a href="<?php echo PRODUCT_IMAGES_URL.$_GET['product'].'/'.$file; ?>" data-lightbox="image-1" data-title="My caption">
-										<img src="<?php echo PRODUCT_IMAGES_URL.$_GET['product'].'/'.PRODUCT_THUMBS_FOLDER_NAME.'/'.$file; ?>">
+									<a href="<?php echo PRODUCT_IMAGES_URL.$productId.'/'.$file; ?>" data-lightbox="image-1" data-title="My caption">
+										<img src="<?php echo PRODUCT_IMAGES_URL.$productId.'/'.PRODUCT_THUMBS_FOLDER_NAME.'/'.$file; ?>">
 									</a>
 								</div>
 							</div>

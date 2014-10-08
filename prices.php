@@ -1,3 +1,4 @@
+<?php $exclude = true; ?>
 <?php $_HEADER = 'Цены'; ?>
 <?php include('./includes/body-open.php'); ?>
 <?php include('./includes/header.php'); ?>
