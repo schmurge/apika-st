@@ -53,10 +53,10 @@
 	}
 
 	$_PRODUCTS = array(
-		array('id'=>1,'label'=>'АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','thumbPath'=>PRODUCT_IMAGES_PATH.'1/','thumbUrl'=>PRODUCT_IMAGES_URL.'1/','images'=>array('')),
-		array('id'=>2,'label'=>'ЦЕЛЬНОСТЕКЛЯННЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','thumbPath'=>PRODUCT_IMAGES_PATH.'2/','thumbUrl'=>PRODUCT_IMAGES_URL.'2/','images'=>array('')),
-		array('id'=>3,'label'=>'САНТЕХНИЧЕСКИЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array('')),
-		array('id'=>4,'label'=>'ПРОТИВОПОЖАРНЫЕ ПЕРЕГОРОДКИ','thumbUrl'=>'','images'=>array('')),
+		array('id'=>1,'label'=>'АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','images'=>array('')),
+		array('id'=>2,'label'=>'ЦЕЛЬНОСТЕКЛЯННЫЕ ПЕРЕГОРОДКИ','thumbName'=>'1.jpg','images'=>array('')),
+		array('id'=>3,'label'=>'САНТЕХНИЧЕСКИЕ ПЕРЕГОРОДКИ','thumbName'=>'6.jpg','images'=>array('')),
+		array('id'=>4,'label'=>'ПРОТИВОПОЖАРНЫЕ ПЕРЕГОРОДКИ','thumbName'=>'2.jpg','images'=>array('')),
 
 		array('id'=>5,'label'=>'ДВЕРИ СТЕКЛЯННЫЕ','thumbUrl'=>'','images'=>array('')),
 		array('id'=>6,'label'=>'ДВЕРИ ГЛУХИЕ','thumbUrl'=>'','images'=>array('')),
