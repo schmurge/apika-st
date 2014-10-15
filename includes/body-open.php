@@ -10,13 +10,91 @@
 	define('PRODUCT_IMAGES_URL', IMAGES_URL.'products/');
 	define('PRODUCT_THUMBS_FOLDER_NAME', 'thumbs');
 
+	$_GROUPS = array(
+		array(
+			'id'=>1
+			,'label'=>'ОФИСНЫЕ ПЕРЕГОРОДКИ И ДВЕРИ'
+			,'thumbName'=>'1.jpg'
+			,'products'=>array(
+				array('productId'=>1,'label'=>'Стационарные перегородки','thumbName'=>'1.jpg')
+				,array('productId'=>2,'label'=>'Цельностеклянные перегородки','thumbName'=>'1.jpg')
+				,array('productId'=>3,'label'=>'Противопожарные перегородки','thumbName'=>'1.jpg')
+				,array('productId'=>4,'label'=>'Офисные двери','thumbName'=>'1.jpg')
+			)
+		),
+		array(
+			'id'=>2
+			,'productId'=>5
+			,'label'=>'МЕТАЛЛИЧЕСКИЕ ДВЕРИ'
+			,'thumbName'=>'1.jpg'
+		),
+		array(
+			'id'=>3
+			,'productId'=>6
+			,'label'=>'ВХОДНЫЕ ГРУППЫ (ТЕПЛЫЕ, ХОЛОДНЫЕ)'
+			,'thumbName'=>'1.jpg'
+		),
+		array(
+			'id'=>4
+			,'productId'=>7
+			,'label'=>'САНТЕХНИЧЕСКИЕ КАБИНЫ'
+			,'thumbName'=>'1.jpg'
+		),
+		array(
+			'id'=>5
+			,'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА И СТАЛИ'
+			,'thumbName'=>'1.jpg'
+			,'products'=>array(
+				array('productId'=>8,'label'=>'Душевые кабины','thumbName'=>'1.jpg')
+				,array('productId'=>9,'label'=>'Кухонные фартуки (скинали)','thumbName'=>'1.jpg')
+				,array('productId'=>10,'label'=>'Стеклянные лестницы','thumbName'=>'1.jpg')
+				,array('productId'=>11,'label'=>'Лестничные ограждения и перила','thumbName'=>'1.jpg')
+				,array('productId'=>12,'label'=>'Навесные панели','thumbName'=>'1.jpg')
+			)
+		),
+		array(
+			'id'=>6
+			,'productId'=>13
+			,'label'=>'РЕСЕПШЕН, БАРНЫЕ СТОЙКИ'
+			,'thumbName'=>'1.jpg'
+		),
+		array(
+			'id'=>7
+			,'productId'=>14
+			,'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА'
+			,'thumbName'=>'1.jpg'
+		),
+		array(
+			'id'=>8
+			,'productId'=>15
+			,'label'=>'НЕСТАНДАРТНЫЕ РЕШЕНИЯ'
+			,'thumbName'=>'1.jpg'
+		),
+	);
+
+	if (!empty($_GET['product'])) {
+		foreach ($_GROUPS as $key=>$group) {
+			if (isset($group['productId']) && $group['productId'] == $_GET['product']) {
+				$_GROUPS[$key]['active'] = true;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
 	$groups = array(
-		array('id'=>1, 'label'=>'ПЕРЕГОРОДКИ'),
-		array('id'=>2, 'label'=>'ДВЕРИ'),
-		array('id'=>3, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА'),
-		array('id'=>4, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА И СТАЛИ'),
-		array('id'=>5, 'label'=>'ИЗДЕЛИЯ ИЗ ДЕРЕВА'),
-		array('id'=>6, 'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА'),
+		array('id'=>1, 'label'=>'ПЕРЕГОРОДКИ', 'isSub'=>false),
+		array('id'=>2, 'label'=>'ДВЕРИ', 'isSub'=>false),
+		array('id'=>3, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА', 'isSub'=>false),
+		array('id'=>4, 'label'=>'ИЗДЕЛИЯ ИЗ СТЕКЛА И СТАЛИ', 'isSub'=>false),
+		array('id'=>5, 'label'=>'ИЗДЕЛИЯ ИЗ ДЕРЕВА', 'isSub'=>false),
+		array('id'=>6, 'label'=>'ХУДОЖЕСТВЕННАЯ ОБРАБОТКА СТЕКЛА', 'isSub'=>false),
 	);
 
 	$_MENU = array(

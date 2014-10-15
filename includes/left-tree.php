@@ -1,13 +1,19 @@
 <ul class="list-group" id="left-tree">
-	<?php foreach ($groups as $group) : ?>
-		<li class="list-group-item"><?php echo $group['label']; ?></li>
-		<?php foreach (getMenuByGroupId($group['id']) as $menuItem) : ?>
-			<li class="list-group-item sub <?php echo (isset($menuItem['active']) && $menuItem['active'] === true) ? ' active ' : '' ?>">
-				<a href="/catalog.php?product=<?php echo $menuItem['productId']; ?>">
-					<?php echo $menuItem['label']; ?>
-				</a>
-			</li>
-		<?php endforeach; ?>
+	<?php foreach ($_GROUPS as $group) : ?>
+		<li class="list-group-item">
+			<?php if (isset($group['productId'])) : ?>
+				<a href="/catalog.php?product=<?php echo (int)$group['productId']; ?>"><?php echo $group['label']; ?></a>
+			<?php else: ?>
+				<a href="/catalog.php?group=<?php echo (int)$group['id']; ?>"><?php echo $group['label']; ?></a>
+			<?php endif; ?>
+		</li>
+		<?php if (isset($group['products']) && !empty($group['products'])) : ?>
+			<?php foreach ($group['products'] as $product) : ?>
+				<li class="list-group-item sub <?php echo (isset($product['active']) && $product['active'] === true) ? ' active ' : '' ?>">
+					<a href="/catalog.php?product=<?php echo $product['productId']; ?>"><?php echo $product['label']; ?></a>
+				</li>
+			<?php endforeach; ?>
+		<?php endif; ?>
 	<?php endforeach; ?>
 </ul>
 <?php if (!isset($exclude) || $exclude !== true) : ?>
