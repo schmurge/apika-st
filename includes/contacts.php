@@ -48,7 +48,7 @@ $_email\n
 $_message
 EOM;
 
-		$sent = $result = mail("doc.schmurge@gmail.com",$subject,$message,"From: $from\n");
+		$sent = $result = mail("zakaz@apikastroy.ru",$subject,$message,"From: $from\n");
 		unset($_POST);
 	}
 
