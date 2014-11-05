@@ -37,22 +37,28 @@
 	$sent = false;
 	if (isset($_POST['email']) && isset($_POST['message']) && isset($_POST['phone']) && isset($_POST['name']) && $validName && $validPhone && $validEmail && $validMessage) {
 		$from = $_POST['email'];
-		$subject = 'Test mail';
+		$subject = 'Заявка';
 		$message = <<<EOM
-Данные заказчика:\n
-$_name\n
-$_phone\n
-$_email\n
-\n
-Описание:\n
-$_message
+<p>Данные заказчика:</p>
+<p>$_name</p>
+<p>$_phone</p>
+<p>$_email</p>
+<br/>
+<p>Описание:</p>
+<p>$_message</p>
 EOM;
 
-		$sent = $result = mail("zakaz@apikastroy.ru",$subject,$message,"From: $from\n");
+		$header = array(
+			"From: ".$from,
+		    "MIME-Version: 1.0",
+		    "Content-Type: text/html;charset=utf-8",
+		);
+
+		$subject = "=?UTF-8?B?".base64_encode($subject)."?=";
+
+		$sent = $result = mail("zakaz@apikastroy.ru",$subject,$message,implode("\n", $header));
 		unset($_POST);
 	}
-
-	
 
 ?>
 <div class="row">
