@@ -1,7 +1,7 @@
 <?php
 
 	define('IMAGES_URL', "/images/");
-	define('IMAGES_PATH', __DIR__.'/../images/');
+	define('IMAGES_PATH', dirname(__FILE__).'/../images/');
 	
 	define('CAROUSEL_IMAGES_URL', IMAGES_URL.'carousel/');
 	define('CAROUSEL_IMAGES_PATH', IMAGES_PATH.'carousel/');
